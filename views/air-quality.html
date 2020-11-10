@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Air Quality</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://dummyimage.com/72x72/000/fff.png&text=Tpl+Fundamentals"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre.min.css"
+      integrity="sha512-9RIcp1f4CE6dEuYX9085tXaEbYd1ap04d2Av1ub/dwuT33WbfbHStDdQ+shKrp5wzZzleh5DOg+7ABSnaQP/nQ=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="./../styles/icons.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <section class="navbar-center">
+        <div class="bg-primary text-light text-center s-circle centered">
+          js()
+        </div>
+      </section>
+      <section class="navbar-section">
+        <a href="../index.html" class="btn btn-link">Home</a>
+        <a href="./air-quality.html" class="btn btn-link">Air Quality</a>
+        <a href="./water-polo-team.html" class="btn btn-link"
+          >Water polo team</a
+        >
+      </section>
+    </header>
+    <div class="divider"></div>
+    <div class="container">
+      <form action="">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <div class="form-horizontal">
+              <div class="form-group">
+                <div class="col-3">
+                  <label class="form-label" for="input-city">City</label>
+                </div>
+                <div class="col-9">
+                  <div class="has-icon-right">
+                    <input
+                      class="form-input"
+                      type="text"
+                      id="input-city"
+                      placeholder="Paris, Beijing..."
+                    />
+                    <i class="form-icon icon icon-location c-hand"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column col-6 col-sm-9 col-ml-auto">
+            <div class="form-horizontal">
+              <button id="btn-air-quality" class="btn btn-primary">
+                Check air quality
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="divider"></div>
+      <div class="columns">
+        <div class="column col-12">
+          <div id="table-result"></div>
+          <!--<table>
+					<thead>
+						<tr>
+							<th>City</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Paris</td>
+						</tr>
+						<tr>
+							<td>Milan</td>
+						</tr>
+					</tbody>
+				</table>-->
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../scripts/script-air-quality.js"></script>
+  </body>
+</html>

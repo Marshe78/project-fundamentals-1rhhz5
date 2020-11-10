@@ -1,0 +1,585 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link rel="icon" type="image/png" href="https://dummyimage.com/72x72/000/fff.png&text=Tpl+Fundamentals">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre.min.css"
+		integrity="sha512-9RIcp1f4CE6dEuYX9085tXaEbYd1ap04d2Av1ub/dwuT33WbfbHStDdQ+shKrp5wzZzleh5DOg+7ABSnaQP/nQ=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css"
+		href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
+	<link rel="stylesheet" type="text/css" href="./styles/atom-code-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="./styles/style.css">
+	<link rel="stylesheet" type="text/css" href="./styles/icons.css">
+</head>
+
+<body>
+	<header class="navbar">
+		<section class="navbar-center">
+			<div class="bg-primary text-light text-center s-circle centered">js()</div>
+		</section>
+		<section class="navbar-section">
+			<a href="./index.html" class="btn btn-link">Home</a>
+			<a href="./views/air-quality.html" class="btn btn-link">Air Quality</a>
+			<a href="./views/water-polo-team.html" class="btn btn-link">Water polo team</a>
+		</section>
+	</header>
+	<div class="divider"></div>
+	<div class="container">
+		<div class="columns">
+			<div class="column col-12">
+				<h1>Hello there!</h1>
+				<h2>Welcome to js fundamentals course.</h2>
+			</div>
+			<div class="column col-12">
+				<h3>This is your javascript toolkit</h3>
+				<ul class="tab">
+					<li class="tab-item active">
+						<a href="#">Basics language</a>
+					</li>
+					<li class="tab-item">
+						<a href="#" class="">JS and the browsers</a>
+					</li>
+					<li class="tab-item">
+						<a href="#">Modern JS </a>
+					</li>
+				</ul>
+			</div>
+			<div class="column col-12">
+				<ul class="content">
+					<li>
+						<article>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>Variables & Data types </h4>
+              </label>
+							</div>
+							<div>
+								<h5>3 declarations, 5 types</h5>
+								<pre><code>let whatType = typeof myVariable</code></pre>
+								<pre><code>var i = "toto"; // string
+let j = false; // boolean
+const k = 4; // number
+let l = [2, 8, "bar"]; // array
+let m = { myKey: myValue }; // object</code></pre>
+							</div>
+							<div>
+								<h5>Templating strings</h5>
+								<pre><code>var text = `${myVariable} ${myOtherVariable}`</code></pre>
+								<div class="divider text-center" data-content="IS EQUAL TO"></div>
+								<pre><code>var text = myVariable + ' ' + myOtherVariable</code></pre>
+							</div>
+							<div>
+								<h5>Operator precedence </h5>
+								<pre><code>var t = z - y < x;
+typeof t // boolean</code></pre>
+							</div>
+							<div>
+								<h5>Type coercion</h5>
+								<pre><code>let x = 4;
+x + " ";
+
+typeof x // string</code></pre>
+							</div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>Functions, parameters and Arrow Functions</h4>
+              </label>
+							</div>
+							<div>
+								<h5>Simple function</h5>
+								<pre><code>function init() {
+  console.log('Function Initialized!');
+};
+
+init();</code></pre>
+								<h5>Function with parameter</h5>
+								<pre><code>function myFunc(param) {
+  console.log(param);
+};
+
+myFunc('Function Initialized!');</code></pre>
+								<h5>Function with callback(s)</h5>
+								<pre><code>function mainDish(callback){
+  // Do something
+  callback(); // desert()
+}
+
+function desert(){
+ // Do somthing
+}
+
+function starter(callback1, callback2) {
+  // Do something
+  callback1(callback2); // mainDish(desert())
+};
+
+starter(mainDish, desert);</code></pre>
+								<h5>Native Javascript Functions</h5>
+								<pre><code>setTimeout(function () {
+  // Do something after 1000ms/1 seconde
+, 1000}</code></pre>
+							</div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>Array</h4>
+              </label>
+							</div>
+							<div>
+								<h5>Basic array</h5>
+								<pre><code>let myArr = [2, 7, "toto"];
+const first = myArr[0]; // 2</code></pre>
+								<h5>Array methods</h5>
+								<pre><code>/*** filter ***/
+
+let numbers = [4, 7, 9];
+let result = numbers.filter(function(number){
+  return number > 6;
+});
+result // [7, 9]</code></pre>
+								<div class="divider text-center" data-content="IS EQUAL TO"></div>
+								<pre><code>/*** filter ***/
+
+let numbers = [4, 7, 9];
+let result = numbers.filter(number => number > 6);
+result // [7, 9]</code></pre>
+								<pre><code>/*** Array.from ***/
+
+let names =  ['Leslie', 'Jane', 'Lio'];
+let superNames = Array.from(names, function(name){
+  return 'Super ' + name;
+});
+superNames // ["Super Leslie", "Super Jane", "Super Lio"]</code></pre>
+								<pre><code>/** indexOf **/
+
+let myArr = ['Moore', 'Wanda']
+myArr.indexOf('Wanda'); // 1
+myArr.indexOf('Toto'); // -1</code></pre>
+							</div>
+							<div class="expand-title c-hand">
+								Going further
+								<i class="icon icon-arrow-down c-hand"></i>
+							</div>
+							<div class="expand-content">
+								<ul>
+									<li>
+										<a target="_blank"
+											href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux">Modzilla
+											documentation</a>
+									</li>
+								</ul>
+							</div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>Object</h4>
+              </label>
+							</div>
+							<div>
+								<h5>Declaration and update value</h5>
+								<pre><code>let myObj = {"foo": "bar"};
+myObj.foo = "toto";
+
+myObj //  {"foo": "toto"};</code></pre>
+								<h5>Methods</h5>
+								<pre><code>/** Object.keys **/
+
+const myObj = {
+  key1: 'string',
+  key2: 100,
+};
+Object.keys(myObj) // ['key1', 'key2']</code></pre>
+								<pre><code>/** Object.values **/
+
+const myObj = {
+  key1: 'string',
+  key2: 100,
+};
+Object.values(myObj) // ['string', 100]</code></pre>
+								<div class="expand-title c-hand">
+									Going further
+									<i class="icon icon-arrow-down c-hand"></i>
+								</div>
+								<div class="expand-content">
+									<ul>
+										<li><a
+												href="https://blog.bitsrc.io/understanding-javascript-mutation-and-pure-functions-7231cc2180d3">Understanding
+												Javascript Mutation and Pure Functions</a></li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<div class="form-group">
+									<label class="form-switch">
+                  <input type="checkbox">
+                  <i class="form-icon"></i>
+                  <h4>Date Objects</h4>
+                </label>
+								</div>
+								<pre><code>const now = Date();
+const myDate = new Date('2019-09-21');
+myDate.getMonth(); // 8
+
+myDate.setFullYear('2020');
+myDate.getFullYear(); // 2020</code></pre>
+								<div class="expand-title c-hand">
+									Going further
+									<i class="icon icon-arrow-down c-hand"></i>
+								</div>
+								<div class="expand-content">
+									<ul>
+										<li>
+											<a target="_blank"
+												href="https://www.digitalocean.com/community/tutorials/understanding-date-and-time-in-javascript">Understanding
+												Date and Time in JavaScript</a>
+										</li>
+										<li>
+											<a target="_blank"
+												href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date">doc
+												Mozilla</a>
+										</li>
+										<li>
+											<a target="_blank"
+												href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat">Format
+												with Intl.DateTimeFormat</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>Loops & Iterations</h4>
+              </label>
+							</div>
+							<div>
+								<h5>My love for...</h5>
+								<pre><code>for(let i = 0; i <= list.length; i++){
+  let myCurrentElement = list[i];
+}</code></pre>
+								<pre><code>const idsList = [{'id': 9}, {'id': 5}, {'id': 23}];
+let ids = idsList.map(function(object){
+  return object.id;
+}); // [9, 5, 23]</code></pre>
+								<div class="divider text-center" data-content="IS EQUAL TO"></div>
+								<pre><code>let ids = idsList.map(object => object.id); // [9, 5, 23]</code></pre>
+								<pre><code>const myArray = ['junior', 'senior', ' intermediary'];
+myArray.forEach((v, i) => console.log(`Index = ${i} Value = ${v}`));</code></pre>
+							</div>
+							<div class="expand-title c-hand">
+								Going further
+								<i class="icon icon-arrow-down c-hand"></i>
+							</div>
+							<div class="expand-content">
+								<ul>
+									<li>
+										<a target="_blank"
+											href="https://dev.to/jerryglammeier/loops-in-javascript-3a97">Loops in
+											JavaScript </a>
+									</li>
+									<li>
+										<a target="_blank"
+											href="https://dev.to/kartik2406/better-loops-in-javascript-2716"> Better
+											loops in
+											JavaScript </a>
+									</li>
+								</ul>
+							</div>
+						</article>
+					</li>
+					<li>
+						<div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>DOM = Document Object Model</h4>
+              </label>
+								<div>
+									<h5>document</h5>
+									<pre><code>let div = document.createElement('div');
+div.innerHTML = 'This is my text';
+document.body.appendChild(div);</code></pre>
+									<h5>HTMLDocument and The selectors</h5>
+									<pre><code>let parent = document.querySelector('.parent');
+let children = parent.children; // HTMLCollection[]
+</code></pre>
+									<pre><code>const elm = document.querySelector('.myClass');
+document.querySelectorAll('.myList > li');
+const title = document.getElementsByClassName('title');</code></pre>
+									<h5>Data-attribute</h5>
+									<pre><code class="HTML">&lt;div data-custom="customData"&gt;This is my div&lt;/div&gt;</code></pre>
+									<pre><code>div.getAttribute('data-custom'); // "customData"</code></pre>
+									<h5>Methods</h5>
+									<pre><code>elm.classList.contains("myClass") // true
+elm.classList.replace("myClass", "yourClass")
+elm.classList.toggle("myClass");
+elm.nextElementSibling</code></pre>
+									<h5>Style</h5>
+									<pre><code>const div = document.querySelector('.myDiv');
+div.style.height = "100";
+div.style.marginTop = "10";</code></pre>
+								</div>
+								<div class="expand-title c-hand">
+									Going further
+									<i class="icon icon-arrow-down c-hand"></i>
+								</div>
+								<div class="expand-content">
+									<ul>
+										<li>
+											<a target="_blank"
+												href="https://www.javascripttutorial.net/javascript-dom/">Javascript-dom</a>
+										</li>
+										<li>
+											<a target="_blank"
+												href="https://developer.mozilla.org/fr/docs/Web/API/HTMLCollection">HTMLCollection</a>
+										</li>
+										<li>
+											<a target="_blank"
+												href="https://github.com/francasix/helper-memory-javascript">Helper</a>
+										</li>
+										<li>
+											<a href="https://developer.mozilla.org/fr/docs/Web/API/Element/classList">Web
+												API classList</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>Events</h4>
+              </label>
+								<pre><code>button.addEventListener('click', function (event) {};</code></pre>
+								<pre><code>input.addEventListener('input', function (event) {};</code></pre>
+							</div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>JS chats with API</h4>
+              </label>
+								<div>
+									<h5>Manage URL</h5>
+									<pre><code>const url = new URL(myURL);
+const param = { query: myQuery };
+url.search = new URLSearchParams(param).toString();</code></pre>
+									<h5>Ajax</h5>
+									<pre><code>let xhrObject = new XMLHttpRequest();
+
+xhrObject.open("GET", url);
+
+xhrObject.setRequestHeader('Content-Type', 'text/plain');
+xhrObject.onreadystatechange = function () {
+
+if (xhrObject.readyState === XMLHttpRequest.DONE) {
+  if (xhrObject.status === 0 || (xhrObject.status >= 200 && xhrObject.status < 400)) {
+    response = JSON.parse(xhrObject.responseText).results;
+  }
+}
+xhr.send();</code></pre>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>Storing data in the browser</h4>
+              </label>
+								<div>
+									<h5>localStorage</h5>
+									<pre><code>localStorage.setItem('myStorage', 'stringStored');
+localStorage.getItem('myStorage'); // stringStored</code></pre>
+								</div>
+								<div class="expand-title c-hand">
+									Going further
+									<i class="icon icon-arrow-down c-hand"></i>
+								</div>
+								<div class="expand-content">
+									<ul>
+										<li>
+											<a target="_blank"
+												href="https://developer.mozilla.org/fr/docs/Web/API/API_IndexedDB">IndexDB</a>
+										</li>
+										<li>
+											<a target="_blank"
+												href="https://developer.mozilla.org/fr/docs/Web/API/Window/sessionStorage">SessionStorage</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>Debugging</h4>
+              </label>
+								<div>
+									<pre><code>console.table(myTable);
+console.log('test', myVar);
+debugger; // Breakpoint
+$0 // last element clicked</code></pre>
+								</div>
+								<div class="expand-title c-hand">
+									Going further
+									<i class="icon icon-arrow-down c-hand"></i>
+								</div>
+								<div class="expand-content">
+									<ul>
+										<li>
+											<a target="_blank"
+												href="https://raygun.com/learn/javascript-debugging-tips?utm_medium=newsletter&utm_source=javascriptweekly&utm_campaign=cooperpress&utm_content=article">The
+												16 JavaScript debugging tips you probably didn’t know</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>navigator</h4>
+              </label>
+								<div>
+									<pre><code>navigator.geolocation.getCurrentPosition(successFunction, errorFunction, options)</code></pre>
+								</div>
+								<div class="expand-title c-hand">
+									Going further
+									<i class="icon icon-arrow-down c-hand"></i>
+								</div>
+								<div class="expand-content">
+									<ul>
+										<li>
+											<a target="_blank"
+												href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition">Geolocation</a>
+										</li>
+										<li>
+											<a target="_blank"
+												href="https://stackoverflow.com/questions/3397585/navigator-geolocation-getcurrentposition-sometimes-works-sometimes-doesnt">hack
+												geolocation</a>
+										</li>
+										<li>
+											<a target="_blank"
+												href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch
+												API</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<article>
+							<div class="form-group">
+								<label class="form-switch">
+                <input type="checkbox">
+                <i class="form-icon"></i>
+                <h4>Syntax best practices</h4>
+              </label>
+							</div>
+							<h5>Object Literal</h5>
+							<pre><code>let server = {
+    name: 'Server',
+    restart() {
+        console.log(`The ${this.name} is restarting...`);
+    }
+};</code></pre>
+							<div>
+								<div class="expand-title c-hand">
+									Going further
+									<i class="icon icon-arrow-down c-hand"></i>
+								</div>
+								<div class="expand-content">
+									<ul>
+										<li>
+											<a href="https://is.gd/VGdaYX">Object Literals in JavaScript</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<h5>Destructuring</h5>
+								<pre><code>const hero = {
+  name: 'Batman',
+  realName: 'Bruce Wayne'
+};
+const name = hero.name; // 'Batman'
+const realName = hero.realName; // 'Bruce Wayne'</code></pre>
+								<div class="divider text-center" data-content="IS EQUAL TO"></div>
+								<pre><code>const { name, realName } = hero;
+name // 'Batman'
+realName // 'Bruce Wayne'</code></pre>
+							</div>
+							<div>
+								<div class="form-group">
+									<label class="form-switch">
+                  <input type="checkbox">
+                  <i class="form-icon"></i>
+                  <h4>Asynchrone: Promise and Async/Await</h4>
+                </label>
+								</div>
+								<h5>Promise</h5>
+								<pre><code>const myPromise = new Promise(function(resolve, reject) {
+  const data = postRequest();
+
+  if(data.ok){
+    resolve(data);
+  } else {
+    reject(data.error);
+  }
+});
+
+myPromise.then(function(response){
+  response // data from resolve()
+}).catch(function(err){
+  err // data.error from reject()
+});</code></pre>
+								<div class="expand-title c-hand">
+									Going further
+									<i class="icon icon-arrow-down c-hand"></i>
+								</div>
+								<div class="expand-content">
+									<ul>
+										<li><a href="https://dev.to/damcosset/i-promise-i-wont-callback-anymore-cp3">I
+												promise I won't
+												callback
+												anymore</a></li>
+									</ul>
+								</div>
+							</div>
+							Class
+							<ul>
+								<li>
+									<a target="_blank"
+										href="https://dev.to/shoupn/javascript-classes-from-es6-and-beyond-3hb5">JavaScript
+										Classes from ES6 and Beyond</a>
+								</li>
+							</ul>
+							Web component
+							Tests Unitaires
+						</article>
+					</li>
+				</ul>
+			</div>
+			<my-compo text="This is my component"></my-compo>
+		</div>
+	</div>
+	<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+	<script src="./scripts/script-index.js"></script>
+</body>
+
+</html>

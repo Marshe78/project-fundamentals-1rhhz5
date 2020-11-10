@@ -1,0 +1,89 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Water Polo</title>
+	<link rel="icon" type="image/png" href="https://dummyimage.com/72x72/000/fff.png&text=Tpl+Fundamentals" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre.min.css"
+		integrity="sha512-9RIcp1f4CE6dEuYX9085tXaEbYd1ap04d2Av1ub/dwuT33WbfbHStDdQ+shKrp5wzZzleh5DOg+7ABSnaQP/nQ=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="./../styles/style.css" />
+	<link rel="stylesheet" type="text/css" href="./../styles/icons.css" />
+</head>
+
+<body>
+	<header class="navbar">
+		<section class="navbar-center">
+			<div class="bg-primary text-light text-center s-circle centered">
+				js()
+			</div>
+		</section>
+		<section class="navbar-section">
+			<a href="../index.html" class="btn btn-link">Home</a>
+			<a href="./air-quality.html" class="btn btn-link">Air Quality</a>
+			<a href="./water-polo-team.html" class="btn btn-link">Water polo team</a>
+		</section>
+	</header>
+	<div class="divider"></div>
+	<div class="container">
+		<div class="column col-12">
+			<div class="columns header-container valign-center">
+				<div class="column col-8 col-lg-12">
+					<h1>Bienvenue à la piscine !</h1>
+					<h2>Créez votre équipe de water-polo</h2>
+				</div>
+				<div class="column col-4 col-lg-12">
+					<div class="columns valign-center">
+						<div class="column col-6">
+							<div class="badge" data-badge="5" id="add-badge">Effectif</div>
+							<div class="badge" data-badge="1" id="ears-protector-badge">
+								Protège-oreilles
+							</div>
+							<div class="badge" data-badge="1" id="teeth-protector-badge">
+								Protège-dents
+							</div>
+						</div>
+						<div class="column col-6 text-center">
+							<div class="columns">
+								<p class="column col-12">
+									<button class="btn btn-primary" id="add">
+                      Ajouter un éléphant
+                    </button>
+								</p>
+								<div class="column col-12">
+									<button class="btn btn-primary disabled" id="validate">
+                      Valider l'équipe
+                    </button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-12">
+			<div class="columns elephants"></div>
+		</div>
+	</div>
+	<img class="background-pool" alt="" />
+	<div class="modal" id="modal">
+		<a href="#close" class="modal-overlay" aria-label="Close"></a>
+		<div class="modal-container">
+			<div class="modal-header">
+				<a href="#close" class="btn btn-clear float-right" aria-label="Close"></a>
+				<div class="modal-title h5">Choisir sa couleur d'équipe</div>
+			</div>
+			<div class="modal-body">
+				<div class="content">
+					<div class="columns" id="colours"></div>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+	<script type="module" src="../scripts/script-water-polo.js"></script>
+	<script type="module" src="../scripts/modules/team.js"></script>
+</body>
+
+</html>
